@@ -1,8 +1,7 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
-import {NgForm} from "@angular/forms";
-import {Router} from "@angular/router";
-import {UserService} from "../../services/user/user.service";
-
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from "@angular/forms";
+import { Router } from "@angular/router";
+import { UserService } from "../../services/user/user.service";
 
 @Component({
   selector: 'app-user-add',
@@ -11,7 +10,6 @@ import {UserService} from "../../services/user/user.service";
 })
 export class UserAddComponent {
   @ViewChild('userForm', {static: false}) newUserForm: NgForm | null = null;
-  @ViewChild('formRef', {static: false}) formRef: ElementRef | null = null;
 
   username: string = '';
   email: string = '';
@@ -19,11 +17,13 @@ export class UserAddComponent {
   code: string = '';
   note: string = '';
 
+  formSubmitted: boolean = false;
+
   constructor(private _usersService: UserService, private router: Router) {
   }
 
   submitForm() {
-    this.formRef?.nativeElement?.classList.add('was-validated');
+    this.formSubmitted = true;
     if (this.newUserForm?.valid) {
 
       let maxId: number = 0;

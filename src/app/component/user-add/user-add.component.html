@@ -2,7 +2,7 @@
   <div class="border-bottom border-dark d-flex justify-content-center mb-4">
     <h1 class="display-2 pb-2 ps-4 pe-4 mb-0"><strong>Add Contact</strong></h1>
   </div>
-  <form #userForm="ngForm" #formRef novalidate class="needs-validation" (submit)="submitForm()">
+  <form #userForm="ngForm" #formRef novalidate class="needs-validation" [class.was-validated]="formSubmitted" (submit)="submitForm()">
     <div class="mb-3">
       <label for="username" class="form-label">Username</label>
       <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username" required>

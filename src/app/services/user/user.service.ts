@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core';
-import {IUser} from "../../models/base.models";
-import {map, Observable, of, tap} from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import { Injectable } from '@angular/core';
+import { IUser } from "../../models/base.models";
+import { Observable, of, tap } from "rxjs";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -24,8 +24,6 @@ export class UserService {
       );
     }
   }
-
-  //edit actions
 
   public addUser(contact: IUser) {
     this.users.push(contact);

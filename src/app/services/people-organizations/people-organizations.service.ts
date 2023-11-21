@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable, of, tap} from "rxjs";
-import {IPeopleOrganizationUnit} from "../../models/base.models";
-
+import { HttpClient } from "@angular/common/http";
+import { Observable, of, tap } from "rxjs";
+import { IPeopleOrganizationUnit } from "../../models/base.models";
 
 @Injectable({
   providedIn: 'root'
 })
 export class PeopleOrganizationsService {
-
 
   users: IPeopleOrganizationUnit[] = [];
 

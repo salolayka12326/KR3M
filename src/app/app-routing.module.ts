@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {UserTableComponent} from "./component/user-table/user-table.component";
-import {UserAddComponent} from "./component/user-add/user-add.component";
-import {PeopleOrganizationsComponent} from "./component/people-organizations/people-organizations.component";
+import { UsersTableComponent } from "./component/user-table/users-table.component";
+import { UserAddComponent } from "./component/user-add/user-add.component";
+import { PeopleOrganizationTableComponent } from "./component/people-organizations/people-organization-table.component";
 
 const routes: Routes = [
   {
     path: '',
-    component: UserTableComponent
+    component: UsersTableComponent
   },
   {
     path: 'add',
@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'organizations',
-    component: PeopleOrganizationsComponent
+    component: PeopleOrganizationTableComponent
   }
 ];
 

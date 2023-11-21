@@ -4,23 +4,18 @@
       <div class="d-xs-block d-lg-none d-flex flex-column custom-sidebar-component-header">
 
         <a href="/" class="link-dark d-flex justify-content-center">
-          <img src="assets/zombie.svg" alt="img" class="custom-sidebar-main-icon"/>
+          <img src="../../assets/zombie.svg" alt="img" class="custom-sidebar-main-icon"/>
         </a>
 
         <ul class="nav flex-column mb-auto text-center">
           <li class="nav-item">
             <a [routerLink]="'/organizations'" class="nav-link py-3 text-white">
-              <i class="bi-star custom-sidebar-icon" ></i>
+              <i class="bi-briefcase custom-sidebar-icon" ></i>
             </a>
           </li>
           <li>
             <a [routerLink]="'/'" class="nav-link py-3 text-white">
-              <i class="bi-search custom-sidebar-icon"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link py-3 text-white">
-              <i class="bi-plus-lg custom-sidebar-icon"></i>
+              <i class="bi-person custom-sidebar-icon"></i>
             </a>
           </li>
         </ul>
@@ -44,7 +39,7 @@
         </ul>
 
         <a href="#" class="d-flex justify-content-center align-items-center p-3" aria-expanded="false">
-          <img src="assets/zombie-person.jpg" alt="img" width="30" height="30" class="rounded-circle">
+          <img src="../../assets/zombie-person.jpg" alt="img" width="30" height="30" class="rounded-circle">
         </a>
 
       </div>
@@ -53,8 +48,8 @@
 
         <div>
           <a class="d-flex align-items-center text-white custom-sidebar-heading text-decoration-none">
-            <h3 class="d-lg-block d-none ">Super Heading</h3>
-            <h3 class="d-xs-block d-lg-none ">SH</h3>
+            <h3 class="d-lg-block d-none">Super Heading</h3>
+            <h3 class="d-xs-block d-lg-none">SH</h3>
           </a>
 
           <a class="nav-link custom-sidebar-item d-flex align-items-center text-white">
@@ -92,10 +87,10 @@
           </ul>
         </div>
 
-        <hr class="custom-sidebar-hr ">
+        <hr class="custom-sidebar-hr"/>
 
         <div>
-          <ul class="nav nav-pills flex-column mb-auto ">
+          <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center custom-sidebar-items-header">
                 <h6>SUPPORT</h6>
@@ -115,11 +110,9 @@
             </li>
           </ul>
         </div>
-
       </div>
     </div>
   </div>
 
   <ng-content class=""></ng-content>
-
 </main>

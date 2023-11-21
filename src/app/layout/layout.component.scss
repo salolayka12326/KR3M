@@ -7,9 +7,6 @@ main {
   overflow-y: hidden;
 }
 
-//for icons
-
-
 @media (min-width: 769px) {
   .custom-sidebar-main-icon {
     width: 5rem;
@@ -94,8 +91,6 @@ main {
   font-size: 1.5rem;
 }
 
-//for body
-
 .custom-sidebar-body-component {
   background-color: #184cac;
 }
@@ -103,8 +98,8 @@ main {
 .custom-sidebar-hr {
   margin-left: 1rem;
   margin-right: 1rem;
-  height:0.2rem;
-  border-width:0;
+  height: 0.2rem;
+  border-width: 0;
   color: #00112a;
   background-color: #00112a
 }
