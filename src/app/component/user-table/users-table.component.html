@@ -1,0 +1,55 @@
+<div class="">
+  <div class="page-name border-bottom border-light">
+    <h1 class="display-6 p-4 mb-1 mt-1 page-title d-lg-block d-none" style="font-size: 1.5rem;"><strong>CRM Contacts</strong></h1>
+  </div>
+  <div class="table-options ps-4 pe-4 pt-4 pb-4 d-flex justify-content-between">
+    <div class="table-options-element">
+      <input [(ngModel)]="search" type="text" class="form-control" placeholder="Filter" aria-label="Filter">
+    </div>
+    <div class="table-options-element">
+      <button class="form-control btn btn-secondary"  aria-label="Last name" [routerLink]="'/add'">Add contact</button>
+    </div>
+  </div>
+  <div class="table-fix-head table-responsive ps-4 pe-4 pt-0">
+    <table class="table">
+      <thead>
+      <tr>
+        <th *ngFor="let column of tableColumns" class="text-secondary col-2" scope="col">{{column.label}}</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of getPageOfUsers()">
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.company}}</td>
+        <td>{{user.code}}</td>
+        <td>{{user.note}}</td>
+        <td>
+          <button type="button" class="btn-close" (click)="deleteUser(user)"></button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="main-pagination ps-4 pe-4 pt-4 d-flex justify-content-center">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" (click)="pageDec()" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li *ngIf="leftDots" class="page-item" (click)="setPage(1)"><a class="page-link">{{1}}</a></li>
+        <li *ngIf="leftDots" class="page-item" ><a class="page-link">...</a></li>
+        <li class="page-item" [ngClass]="{'active': element==page}" *ngFor="let element of paginationElements" (click)="setPage(element)"><a class="page-link">{{element}}</a></li>
+        <li *ngIf="rightDots" class="page-item" ><a class="page-link">...</a></li>
+        <li *ngIf="rightDots" class="page-item" (click)="setPage(pageCount)"><a class="page-link">{{pageCount}}</a></li>
+        <li class="page-item">
+          <a class="page-link" (click)="pageInc()" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
