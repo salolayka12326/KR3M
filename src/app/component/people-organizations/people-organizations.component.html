@@ -1,0 +1,145 @@
+<div class="organizations-body">
+  <div class="ps-4 pe-4 pt-4 pb-4 d-flex justify-content-between">
+    <div class="d-flex justify-content-start align-items-center">
+      <h1 class="display-6 mb-0 page-title d-lg-block d-none" ><strong>People & Organizations</strong></h1>
+      <h1 class="display-6 mb-0 page-title d-xs-block d-lg-none" ><strong>P&O</strong></h1>
+      <select class="form-select ms-4 border border-secondary" aria-label="Default select example">
+        <option selected>Saved lists</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="d-flex d-lg-block d-none">
+      <button class="btn btn-outline-primary ms-4 btn-outline-secondary text-info"  aria-label="Last name">Add Person</button>
+      <button class="btn btn-outline-primary ms-4 btn-outline-secondary text-info"  aria-label="Last name">Add Organization</button>
+      <div class="border border-end ms-4"></div>
+      <button class="btn btn-outline-primary ms-4 btn-outline-secondary text-info"  aria-label="Last name">Import</button>
+    </div>
+    <div class="d-flex d-xs-block d-lg-none">
+      <button class="btn btn-outline-primary ms-4 btn-outline-secondary text-info"  aria-label="Last name">Per</button>
+      <button class="btn btn-outline-primary ms-4 btn-outline-secondary text-info"  aria-label="Last name">Org</button>
+      <div class="border border-end ms-4"></div>
+      <button class="btn btn-outline-primary ms-4 btn-outline-secondary text-info"  aria-label="Last name">Imp</button>
+    </div>
+  </div>
+
+
+  <div class="ps-4 pe-4 pt-2 pb-2 d-flex justify-content-between" style="background-color: #e5e5e5">
+    <div class="d-flex justify-content-start align-items-center">
+      <div class="d-flex justify-content-start align-items-center">
+        <h6 class="mb-0 text-secondary" style="white-space: nowrap;">
+          <strong class="d-lg-block d-none">Type</strong>
+          <strong class="d-xs-block d-lg-none">T</strong>
+        </h6>
+        <select class="form-select ms-1 filter-select me-4" aria-label="Default select example">
+          <option value="Organization" selected>Organization</option>
+          <option value="People">People</option>
+        </select>
+      </div>
+      <div class="d-flex justify-content-start align-items-center">
+        <h6 class="mb-0 text-secondary" style="white-space: nowrap;">
+          <strong class="d-lg-block d-none">Has an email address</strong>
+          <strong class="d-xs-block d-lg-none">Has email</strong>
+          </h6>
+
+        <select class="form-select ms-1 filter-select me-4" aria-label="Default select example">
+          <option value="Yes" selected>Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="d-flex justify-content-start align-items-center">
+        <select class="form-select ms-1 filter-select me-4" aria-label="Default select example">
+          <option selected>Saved lists</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="d-flex justify-content-start align-items-center">
+        <select class="form-select ms-1 filter-select me-4" aria-label="Default select example">
+          <option selected>Saved lists</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="d-flex justify-content-start align-items-center">
+        <select class="form-select ms-1 filter-select me-4" aria-label="Default select example">
+          <option selected>Saved lists</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+    </div>
+    <div class="d-flex">
+      <button class="btn ms-4 border text-secondary clear-filters-button d-lg-block d-none"  aria-label="Last name">Clear filters <i class="bi-x"></i></button>
+      <button class="btn ms-4 border text-secondary clear-filters-button d-xs-block d-lg-none"  aria-label="Last name"><i class="bi-x"></i></button>
+    </div>
+  </div>
+
+
+
+
+  <div class="ps-4 pe-4 pt-4 pb-4 d-flex justify-content-between">
+    <div class="d-flex justify-content-start align-items-center">
+      <h1 class="display-6 mb-0 text-secondary" style="white-space: nowrap; font-size: 1rem;"><strong>Showing 1-10 of {{allPeopleOrganizations.length}}</strong></h1>
+    </div>
+    <div class="d-flex">
+      <button class="btn btn-outline-primary ms-4 btn-outline-secondary"  aria-label="Last name">Export</button>
+      <select class="form-select ms-4 border border-secondary text-secondary" aria-label="Default select example">
+        <option selected>Email</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <div class="btn-group ms-4" role="group">
+        <button type="button" class="btn btn-outline-secondary"><i class="bi-journal"></i></button>
+        <button type="button" class="btn btn-outline-secondary"><i class="bi-stickies"></i></button>
+      </div>
+      <button class="btn btn-outline-primary ms-4 btn-outline-secondary"  aria-label="Last name" ><i class="bi-trash"></i></button>
+      <div class="border border-end ms-4"></div>
+      <button class="btn btn-outline-primary ms-4 btn-outline-secondary"  aria-label="Last name" ><i class="bi-gear-fill"></i></button>
+    </div>
+  </div>
+  <div class="table-fix-head table-responsive ps-4 pe-4 pt-0">
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th *ngFor="let column of tableColumns" class="text-secondary col-2" scope="col">{{column.label}}</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let unit of getPageOfPeopleOrganizations()">
+        <td>{{unit.summary}}</td>
+        <td>{{unit.email}}</td>
+        <td>{{unit.phone}}</td>
+        <td>{{unit.location}}</td>
+        <td>{{unit.tags}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="main-pagination ps-4 pe-4 pt-4 d-flex justify-content-center">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" (click)="pageDec()" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li *ngIf="leftDots" class="page-item" (click)="setPage(1)"><a class="page-link">{{1}}</a></li>
+      <li *ngIf="leftDots" class="page-item" ><a class="page-link">...</a></li>
+      <li class="page-item" [ngClass]="{'active': element==page}" *ngFor="let element of paginationElements" (click)="setPage(element)"><a class="page-link">{{element}}</a></li>
+      <li *ngIf="rightDots" class="page-item" ><a class="page-link">...</a></li>
+      <li *ngIf="rightDots" class="page-item" (click)="setPage(pageCount)"><a class="page-link">{{pageCount}}</a></li>
+      <li class="page-item">
+        <a class="page-link" (click)="pageInc()" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+</div>

@@ -1,0 +1,52 @@
+<div class="container mt-5 w-50">
+  <div class="border-bottom border-dark d-flex justify-content-center mb-4">
+    <h1 class="display-2 pb-2 ps-4 pe-4 mb-0"><strong>Add Contact</strong></h1>
+  </div>
+  <form #userForm="ngForm" #formRef novalidate class="needs-validation" (submit)="submitForm()">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username" required>
+      <div class="invalid-feedback">
+        Please choose a username.
+      </div>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" required>
+      <div class="invalid-feedback">
+        Please choose a email.
+      </div>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="company" class="form-label">Company</label>
+      <input type="text" class="form-control" id="company" [(ngModel)]="company" name="company" required>
+      <div class="invalid-feedback">
+        Please choose a company.
+      </div>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="code" class="form-label">Code</label>
+      <input type="text" class="form-control" id="code" [(ngModel)]="code" name="code" required>
+      <div class="invalid-feedback">
+        Please choose a code.
+      </div>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="note" class="form-label">Note</label>
+      <textarea class="form-control" id="note" [(ngModel)]="note" name="note" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+</div>

@@ -1,0 +1,125 @@
+<main>
+  <div class="">
+    <div class="d-flex flex-row col pe-0">
+      <div class="d-xs-block d-lg-none d-flex flex-column custom-sidebar-component-header">
+
+        <a href="/" class="link-dark d-flex justify-content-center">
+          <img src="assets/zombie.svg" alt="img" class="custom-sidebar-main-icon"/>
+        </a>
+
+        <ul class="nav flex-column mb-auto text-center">
+          <li class="nav-item">
+            <a [routerLink]="'/organizations'" class="nav-link py-3 text-white">
+              <i class="bi-star custom-sidebar-icon" ></i>
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="'/'" class="nav-link py-3 text-white">
+              <i class="bi-search custom-sidebar-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link py-3 text-white">
+              <i class="bi-plus-lg custom-sidebar-icon"></i>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav flex-column text-center">
+          <li class="nav-item">
+            <a href="#" class="nav-link py-3 text-white">
+              <i class="bi-bell custom-sidebar-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link py-3 text-white">
+              <i class="bi-grid-3x3-gap-fill custom-sidebar-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link py-3 text-white">
+              <i class="bi-question-circle custom-sidebar-icon"></i>
+            </a>
+          </li>
+        </ul>
+
+        <a href="#" class="d-flex justify-content-center align-items-center p-3" aria-expanded="false">
+          <img src="assets/zombie-person.jpg" alt="img" width="30" height="30" class="rounded-circle">
+        </a>
+
+      </div>
+
+      <div class="d-lg-block d-none d-flex flex-column custom-sidebar-component"  style="box-shadow: -10px 0 15px -5px rgba(0, 0, 0, 0.5);">
+
+        <div>
+          <a class="d-flex align-items-center text-white custom-sidebar-heading text-decoration-none">
+            <h3 class="d-lg-block d-none ">Super Heading</h3>
+            <h3 class="d-xs-block d-lg-none ">SH</h3>
+          </a>
+
+          <a class="nav-link custom-sidebar-item d-flex align-items-center text-white">
+            <i class="bi-arrow-left-circle-fill custom-sidebar-icon"></i>
+            <h5 class="d-lg-block d-none mt-auto mb-auto ms-3">Back</h5>
+          </a>
+
+          <hr class="custom-sidebar-hr">
+
+          <div class="custom-sidebar-item">
+            <h5 class="text-white d-lg-block d-none"><strong>Teamlead CRM</strong></h5>
+            <h5 class="text-white d-xs-block d-lg-none"><strong>CRM</strong></h5>
+          </div>
+        </div>
+
+        <div>
+          <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center custom-sidebar-items-header">
+                <h6>MAIN</h6>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="'/organizations'" class="nav-link custom-sidebar-item d-flex align-items-center text-white">
+                <h5 class="d-lg-block d-none">Companies</h5>
+                <h5 class="d-xs-block d-lg-none">Comp</h5>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="'/'" class="nav-link custom-sidebar-item d-flex align-items-center text-white">
+                <h5 class="d-lg-block d-none">Contacts</h5>
+                <h5 class="d-xs-block d-lg-none">Cont</h5>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <hr class="custom-sidebar-hr ">
+
+        <div>
+          <ul class="nav nav-pills flex-column mb-auto ">
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center custom-sidebar-items-header">
+                <h6>SUPPORT</h6>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-sidebar-item d-flex align-items-center text-white">
+                <h5 class="d-lg-block d-none">Feedback</h5>
+                <h5 class="d-xs-block d-lg-none">Feed</h5>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-sidebar-item d-flex align-items-center text-white">
+                <h5 class="d-lg-block d-none">Documentation</h5>
+                <h5 class="d-xs-block d-lg-none">Docs</h5>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <ng-content class=""></ng-content>
+
+</main>

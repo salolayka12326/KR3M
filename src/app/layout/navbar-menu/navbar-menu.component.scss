@@ -1,0 +1,46 @@
+.navbar {
+  background-color: #1f2e5c;
+  height: 4rem;
+}
+
+.custom-navbar-icon {
+  font-size: 1.5rem;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+.dropdown-toggle {
+  color: white;
+}
+
+
+@media (min-width: 769px) {
+
+  .custom-input {
+    background-color: #37436d;
+    color: #ffffff !important;
+    border: 0;
+    width: 30rem;
+  }
+
+  .custom-input::placeholder {
+    color: #ffffff !important;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .custom-input {
+    background-color: #37436d;
+    color: #ffffff !important;
+    border: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 12rem;
+  }
+
+  .custom-input::placeholder {
+    color: #ffffff !important;
+  }
+
+}
